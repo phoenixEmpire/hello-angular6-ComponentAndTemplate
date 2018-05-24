@@ -1,0 +1,10 @@
+<div class="parent">
+    <h2>all hooks parent</h2>
+    <button (click)="toggleChild();"> {{hasChild?'destroy':'create'}} child component </button>
+    <button (click)="updateHero();" [hidden]="!hasChild"> update hero </button>
+    <app-all-hooks-child *ngIf="hasChild" [name]="heroName"></app-all-hooks-child>
+    <h4>-- Lifecycle Hook Log--</h4>
+    <div *ngFor="let log of hooksLog">
+        {{log}}
+    </div>
+</div>

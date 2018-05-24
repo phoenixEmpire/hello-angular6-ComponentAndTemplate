@@ -1,0 +1,28 @@
+<h3>使用 DoCheck 钩子来检测那些 Angular 自身无法捕获的变更并采取行动。</h3>
+
+<div class="parent">
+    <h2>{{title}}</h2>
+
+    <table>
+        <tr>
+            <td>
+                Power:
+            </td>
+            <td>
+                <input [(ngModel)]="power"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Hero.name:
+            </td>
+            <td>
+                <input [(ngModel)]="hero.name"/>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <button (click)="reset();">Reset Log</button>
+    </p>
+    <app-do-check-child [hero]="hero" [power]="power"></app-do-check-child>
+</div>

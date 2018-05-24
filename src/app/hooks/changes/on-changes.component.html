@@ -1,0 +1,28 @@
+<h3>一旦检测到该组件(或指令)的输入属性发生了变化，Angular 就会调用它的 ngOnChanges() 方法。</h3>
+
+<div class="parent">
+    <h2>{{title}}</h2>
+
+    <table>
+        <tr>
+            <td>
+                Power:
+            </td>
+            <td>
+                <input [(ngModel)]="power"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Hero.name:
+            </td>
+            <td>
+                <input [(ngModel)]="hero.name"/>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <button (click)="reset();">Reset Log</button>
+    </p>
+    <app-on-changes-child [hero]="hero" [power]="power"></app-on-changes-child>
+</div>

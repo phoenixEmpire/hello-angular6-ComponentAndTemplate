@@ -1,0 +1,6 @@
+/* 样式添加到组件上 */
+:host{
+    display: block;
+    background-color: green;
+    color: white;
+}

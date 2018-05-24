@@ -1,0 +1,33 @@
+<h4 id="ngFor-trackBy">*ngFor trackBy</h4>
+<div>
+    <button (click)="resetHeroes();">Reset heroes</button>
+    <button (click)="changeIds();">Change ids</button>
+    <button (click)="clearTrackByCounts();">Clear counts</button>
+</div>
+<div>
+    <div>heroesNoTrackByCount : {{heroesNoTrackByCount}}</div>
+    <div>heroesWithTrackByCount : {{heroesWithTrackByCount}}</div>
+    <div>heroesWithTrackByCountReset : {{heroesWithTrackByCountReset}}</div>
+</div>
+
+<p>
+    <i>without</i> trackBy
+</p>
+<div class="box">
+    <div #noTrackBy *ngFor="let hero of heroes">
+        ({{hero.id}}) {{hero.name}}
+    </div>
+</div>
+
+<p>
+    with trackBy
+</p>
+<div class="box">
+    <!-- 
+        若trackBy指定的函数存在，则比较对象的属性。
+        若trackBy指定的函数不存在，则比较对象的引用 
+    -->
+    <div #withTrackBy *ngFor="let hero of heroes;trackBy:trackByHeroes">
+        ({{hero.id}}) {{hero.name}}
+    </div>
+</div>

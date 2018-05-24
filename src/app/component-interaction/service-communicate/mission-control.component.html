@@ -1,0 +1,9 @@
+<h2>Mission Control: 父、子组件通过服务通信</h2>
+<button (click)="announce();">Anounce mission</button>
+<app-interaction-astronaut *ngFor="let astronaut of astronauts" [astronaut]="astronaut"></app-interaction-astronaut>
+<h3>History</h3>
+<ul>
+    <li *ngFor="let event of events">
+        {{event}}
+    </li>
+</ul>
