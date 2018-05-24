@@ -17,6 +17,9 @@ Chrome开启跨域.
 Safari停止跨源限制.
 
 ## 升级到Angular6
+
 1 sudo npm install -g @angular/cli@latest (Mac环境)
+
 2 npm install @angular/cli@latest --save-dev
+
 3 ng update @angular/cli --migrate-only --from=1.7.4
