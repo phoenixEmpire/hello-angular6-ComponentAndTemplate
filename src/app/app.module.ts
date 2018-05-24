@@ -10,6 +10,7 @@ import { ComponentInteractionModule } from './component-interaction/component-in
 import { ComponentStyleModule } from './component-style/component-style.module';
 import { DynamicComponentModule } from './dynamic-component/dynamic-component.module';
 import { CustomElementModule } from './custom-element/custom-element.module';
+import { StructuralDirectiveModule } from './structural-directive/structural-directive.module';
 
 const routes: Routes = [
   { path: 'track-by', component: TrackByComponent }
@@ -27,7 +28,8 @@ const routes: Routes = [
     ComponentInteractionModule,
     ComponentStyleModule,
     CustomElementModule,
-    DynamicComponentModule
+    DynamicComponentModule,
+    StructuralDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

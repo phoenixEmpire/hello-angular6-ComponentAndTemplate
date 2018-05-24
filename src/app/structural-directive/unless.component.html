@@ -1,0 +1,23 @@
+<h2>在渲染视图之前，Angular 会把ng-template及其内容替换为一个注释。</h2>
+
+<h2>UnlessDirective</h2>
+
+<p>
+    The condition is currently
+    <span [ngClass]="{'a':!condition,'b':condition,'unless':true}">{{condition}}</span>
+    <button (click)="condition = !condition" [ngClass]="{'a':condition,'b':!condition}">
+        Toggle condition to {{condition?'false':'true'}}
+    </button>
+</p>
+
+<div *ngIf="condition">
+    condition
+</div>
+
+<p *appUnless="condition" class="unless a">
+    (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless b">
+    (B) Although the condition is true,this paragraph is displayed because appUnless is set to false.
+</p>
