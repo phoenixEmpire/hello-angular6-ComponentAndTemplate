@@ -5,9 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AnimationRoutingModule } from './animation.routing';
 import { EnterLeaveComponent } from './enter-leave.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EnterLeaveStatesComponent } from './enter-leave-states.component';
+import { KeyframesComponent } from './keyframes.component';
+import { GroupsComponent } from './groups.component';
 @NgModule({
     declarations: [
-        EnterLeaveComponent
+        EnterLeaveComponent,
+        EnterLeaveStatesComponent,
+        KeyframesComponent,
+        GroupsComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AnimationRoutingModule
     ],
     exports: [
-        EnterLeaveComponent
+        EnterLeaveComponent,
+        EnterLeaveStatesComponent,
+        KeyframesComponent,
+        GroupsComponent
     ]
 })
 export class AnimationModule { }

@@ -1,0 +1,14 @@
+<h2>基于关键帧(Keyframes)的多阶段动画</h2>
+<h2>动画回调</h2>
+
+<div class="buttons">
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addInactive()">Add inactive hero</button>
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addActive()">Add active hero</button>
+    <button [disabled]="!heroService.canRemove()" (click)="heroService.remove()">Remove hero</button>
+</div>
+
+<ul>
+    <li *ngFor="let hero of heroes" [@flyInOut]="hero.state" (@flyInOut.start)="animationStart($event)" (@flyInOut.done)="animationDone($event)">
+        {{hero.name}}
+    </li>
+</ul>

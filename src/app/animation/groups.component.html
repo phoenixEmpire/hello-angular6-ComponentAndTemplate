@@ -1,0 +1,12 @@
+<h2>并行动画组(Parallel animation groups)</h2>
+<div class="buttons">
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addInactive()">Add inactive hero</button>
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addActive()">Add active hero</button>
+    <button [disabled]="!heroService.canRemove()" (click)="heroService.remove()">Remove hero</button>
+</div>
+
+<ul>
+    <li *ngFor="let hero of heroes" [@flyInOut]="'in'">
+        {{hero.name}}
+    </li>
+</ul>

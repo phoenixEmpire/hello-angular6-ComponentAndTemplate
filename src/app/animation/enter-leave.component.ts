@@ -25,7 +25,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ]
 })
 export class EnterLeaveComponent {
-    @Input()
     heroes: Hero[];
 
     constructor(private heroService: HeroService) {
