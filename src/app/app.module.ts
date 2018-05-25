@@ -11,6 +11,8 @@ import { ComponentStyleModule } from './component-style/component-style.module';
 import { DynamicComponentModule } from './dynamic-component/dynamic-component.module';
 import { CustomElementModule } from './custom-element/custom-element.module';
 import { StructuralDirectiveModule } from './structural-directive/structural-directive.module';
+import { PipeModule } from './pipe/pipe.module';
+import { AnimationModule } from './animation/animation.module';
 
 const routes: Routes = [
   { path: 'track-by', component: TrackByComponent }
@@ -29,7 +31,9 @@ const routes: Routes = [
     ComponentStyleModule,
     CustomElementModule,
     DynamicComponentModule,
-    StructuralDirectiveModule
+    StructuralDirectiveModule,
+    PipeModule,
+    AnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

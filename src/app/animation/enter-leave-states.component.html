@@ -1,0 +1,17 @@
+<h4>Enter & Leave & States</h4>
+<p>
+    Enter and leave animations combined with active/inactive state animations. Different enter and leave transitions depending
+    on state.
+</p>
+
+<div class="buttons">
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addInactive()">Add inactive hero</button>
+    <button [disabled]="!heroService.canAdd()" (click)="heroService.addActive()">Add active hero</button>
+    <button [disabled]="!heroService.canRemove()" (click)="heroService.remove()">Remove hero</button>
+</div>
+
+<ul>
+    <li *ngFor="let hero of heroes" (click)="hero.toggleState()" [@flyInOutStates]="hero.state">
+        {{hero.name}}
+    </li>
+</ul>
